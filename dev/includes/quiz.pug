@@ -1,0 +1,23 @@
+.quiz
+  .quiz__container.container
+    .quiz__row.content
+      button.quiz__close.close(type="button") X
+      
+      .quiz__area.quiz-main
+        h3.quiz-main__question.question
+          img(src="./images/decor.svg" alt="")
+          span.question-title Что бы вы делали при взломе вашего компьютера?
+          p.quiz-main__count
+            |(
+            span.quiz-main__now 1
+            span.quiz-main__sep /
+            span.quiz-main__all 5
+            |)
+          .question__next-block
+            button.question__next.green-btn(type="button") Дальше
+        ul.quiz-main__list.quiz-main__answers
+          li.quiz-main__variant Звонил в полицию
+          li.quiz-main__variant Выключил бы компьютер
+          li.quiz-main__variant Надеялся на лучшее
+          li.quiz-main__variant Отключил компьютер от сети
+          li.quiz-main__variant Всё пропало!

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Информационная безопасность</title>
+    <link rel="shortcut icon" href="./images/decor.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&amp;display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./css/style.min.css">
+    <script defer src="./js/main.min.js"></script>
+  </head>
+  <body>
+    <div class="dots"><a class="dot anchor active" href="#header"></a><a class="dot anchor" href="#points"></a><a class="dot anchor" href="#examples"></a><a class="dot anchor" href="#help"></a><a class="dot anchor" href="#how"></a><a class="dot anchor" href="#videos"></a><a class="dot anchor" href="#why-we"></a><a class="dot anchor" href="#questions"></a><a class="dot anchor" href="#quiz-start"></a></div>
+    <div class="quiz">
+      <div class="quiz__container container">
+        <div class="quiz__row content">
+          <button class="quiz__close close" type="button">X</button>
+          <div class="quiz__area quiz-main">
+            <h3 class="quiz-main__question question"><img src="./images/decor.svg" alt=""><span class="question-title"></span>
+              <p class="quiz-main__count">(<span class="quiz-main__now">1</span><span class="quiz-main__sep">/</span><span class="quiz-main__all">5</span>)</p>
+              <div class="question__next-block">
+                <button class="question__next green-btn" type="button">Дальше</button>
+              </div>
+            </h3>
+            <ul class="quiz-main__list quiz-main__answers">
+              <li class="quiz-main__variant"></li>
+              <li class="quiz-main__variant"></li>
+              <li class="quiz-main__variant"></li>
+              <li class="quiz-main__variant"></li>
+              <li class="quiz-main__variant"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="section header section-blue" id="header" data-section-name="header">
+      <div class="header__container container">
+        <div class="header__row">
+          <nav class="header__nav nav"><a class="header__logo logo" href="./index.html"><img class="logo__decor decor" src="./images/decor.svg" alt="">
+              <p class="logo__text">Информационная<br>Безопасность</p></a>
+            
+            <ul class="nav__list">
+              <li class="nav__elem"><a class="nav__link anchor" href="#points">Термины</a></li>
+              <li class="nav__elem"><a class="nav__link anchor" href="#examples">Примеры опасностей</a></li>
+              <li class="nav__elem"><a class="nav__link anchor" href="#videos">Видеоролики</a></li>
+              <li class="nav__elem"><a class="nav__link anchor" href="#questions">Вопросы</a></li>
+            </ul>
+          </nav>
+          <div class="header__promo promo">
+            <div class="promo__line">
+              <div class="promo__about">
+                <h1 class="promo__title">Соблюдайте принципы<br>Информационной безопасности</h1>
+                <p class="promo__text">Разбираемся в терминах и рисках информационных угроз.<br>Учимся защищать себя.</p><a class="promo__order green-btn anchor" href="#points">Перейти к терминам</a>
+              </div>
+              <div class="promo__image">
+                <picture>
+                  <source srcset="./images/earth.webp 1x"><img class="earth" src="./images/earth.png" alt="">
+                </picture>
+                <picture>
+                  <source srcset="./images/sputnik.webp 1x"><img class="sputnik" src="./images/sputnik.png" alt="">
+                </picture><img class="light" src="./images/light.svg" alt=""><img class="stars" src="./images/stars.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="section points" id="points" data-section-name="points">
+        <div class="points__container container">
+          <div class="points__row row">
+            <div class="points__title section-title">
+              <h1 class="section-title__text">НАБОР ТЕРМИНОВ И ОПРЕДЕЛЕНИЙ, ЧАСТО ВСТРЕЧАЮЩИХСЯ В СФЕРЕ ИНФОРМАЦИОННОЙ БЕЗОПАСНОСТИ</h1>
+              <p class="section-title__subtext">
+                Под информационной безопасностью (ИБ) следует понимать защиту
+                интересов субъектов информационных отношений. Ниже описаны основные
+                ее составляющие – конфиденциальность, целостность, доступность.
+                
+              </p>
+            </div>
+            <dl class="points__grid">
+              <div class="points__item point">
+                <dt class="point__title">
+                  <div class="decor"><img src="./images/decor.svg" alt=""></div>
+                  <h3>Конфиденциальность</h3>
+                </dt>
+                <dd class="point__about">состояние информации, при котором ознакомиться с ней могут только уполномоченные лица.</dd>
+              </div>
+              <div class="points__item point">
+                <dt class="point__title">
+                  <div class="decor"><img src="./images/decor.svg" alt=""></div>
+                  <h3>Целостность</h3>
+                </dt>
+                <dd class="point__about">состояние информации, при котором изменять её могут только уполномоченные лица.</dd>
+              </div>
+              <div class="points__item point">
+                <dt class="point__title">
+                  <div class="decor"><img src="./images/decor.svg" alt=""></div>
+                  <h3>Доступность</h3>
+                </dt>
+                <dd class="point__about">возможность получения авторизованного доступа к информации со стороны уполномоченных лиц.</dd>
+              </div>
+              <div class="points__item point">
+                <dt class="point__title">
+                  <div class="decor"><img src="./images/decor.svg" alt=""></div>
+                  <h3>Пароль</h3>
+                </dt>
+                <dd class="point__about">секретный набор символов, позволяющий подтвердить соответствие субъекта предъявленному им идентификатору.</dd>
+              </div>
+              <div class="points__item point">
+                <dt class="point__title">
+                  <div class="decor"><img src="./images/decor.svg" alt=""></div>
+                  <h3>Идентификатор</h3>
+                </dt>
+                <dd class="point__about">уникальный набор символов, однозначно соответствующий объекту или субъекту в данной системе.</dd>
+              </div>
+              <div class="points__item point">
+                <dt class="point__title">
+                  <div class="decor"><img src="./images/decor.svg" alt=""></div>
+                  <h3>Информация</h3>
+                </dt>
+                <dd class="point__about">данные, представленные в виде, пригодном для хранения, обработки и передачи, и представляющие определенную ценность.</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+      <section class="section examples" id="examples" data-section-name="examples">
+        <div class="examples__container container">
+          <div class="examples__row row">
+            <div class="examples__title section-title">
+              <h1 class="section-title__text">Примеры информационных опасностей и угроз</h1>
+              <div class="examples__slider slider">
+                <div class="slider__case case">
+                  <div class="case__line">
+                    <div class="case__aside">
+                      <div class="case__aside_elem">
+                        <h2 class="case__title">Информационная угроза — утечка информации</h2>
+                        <div class="case__image"><img src="./images/utechka.jpg" alt=""></div>
+                      </div>
+                      
+                      <div class="case__aside_elem">
+                        <h2 class="case__title">Информационная угроза — несанкционированный доступ</h2>
+                        <div class="case__image"><img src="./images/access.jpg" alt=""></div>
+                      </div>
+                      
+                      <div class="case__aside_elem">
+                        <h2 class="case__title">Информационная угроза - кибертерроризм</h2>
+                        <div class="case__image"><img src="./images/terr.jpg" alt=""></div>
+                      </div>
+                      
+                      <div class="case__aside_elem">
+                        <h2 class="case__title">Информационная угроза - кибервойна</h2>
+                        <div class="case__image"><img src="./images/cyberwar.jpg" alt=""></div>
+                      </div>
+                    </div>
+                    
+                    <div class="case__content">
+                      <div class="case__task task">
+                        <div class="task__question question">
+                          <h3 class="task__title question__title">Что из себя представляет?</h3>
+                          <p class="task__text question__text">
+                            Утечка информации - это неконтролируемое распространение информации за пределы организации, помещения, здания, какой-либо территории, а также определенного круга лиц, которые имеют доступ к этой информации. В случае обнаружения утечки важно своевременно ее ликвидировать, но лучше всего заранее принять превентивные меры по защите информации с ограниченным доступом.
+                            
+                          </p>
+                        </div>
+                        <div class="task__answer answer">
+                          <h3 class="task__title answer__title">Анализ риска</h3>
+                          <p class="task__text answer__text">Для защиты от утечки конфиденциальной информации могут использоваться: системы аутентификации и идентификации, системы криптографической защиты дисковых данных, а также информации, передаваемой по сетям, программные решения для управления ключами шифрования. Возможности средств аутентификации и идентификации позволяют ограничить доступ к ресурсам сети. Для этого у пользователя запрашивается некая информация, которая известна только ему, после чего он получает доступ. Для реализации этой возможности используются: биометрия — физиологические особенности людей (отпечатки пальцев, изображение радужной оболочки глаза и т.д.); конфиденциальная информация — пароли, ключи и прочее.</p>
+                        </div>
+                      </div>
+                      
+                      <div class="case__task task">
+                        <div class="task__question question">
+                          <h3 class="task__title question__title">Что из себя представляет?</h3>
+                          <p class="task__text question__text">
+                            Несанкционированный доступ - получение возможности обрабатывать данные, хранящиеся на различных носителях и накопителях, посредством самовольного изменения или фальсификации соответствующих прав и полномочий. Подобное явление имеет место, когда какие-то сведения предназначены только определённому кругу лиц, но существующее ограничение нарушается.
+                            
+                          </p>
+                        </div>
+                        <div class="task__answer answer">
+                          <h3 class="task__title answer__title">Анализ риска</h3>
+                          <p class="task__text answer__text">Большинство операционных систем предполагает автоматическую встроенную защиту от несанкционированного доступа. Но указанные способы обладают существенным недостатком: они быстро устаревают. Соответственно, специалисты рекомендуют использовать постоянно обновляющийся пакет программ для контроля доступа к отдельным документам. Одними из наиболее надежных признаются аппаратные средства защиты, они чаще всего используются банковскими организациями при выдаче денег. Примерами таких средств могут послужить электронные замки. К повышенным мерам предосторожности относят строгую и усиленную аутентификацию. Особый упор может быть сделан на логировании действий администратора и пользователей.</p>
+                        </div>
+                      </div>
+                      
+                      <div class="case__task task">
+                        <div class="task__question question">
+                          <h3 class="task__title question__title">Что из себя представляет?</h3>
+                          <p class="task__text question__text">
+                            Кибертерроризм — комплекс незаконных действий в киберпространстве, создающих угрозу государственной безопасности, личности и обществу,
+                            использование компьютерных и телекоммуникационных технологий (прежде всего, Интернета) в террористических целях. Кибертерроризмом могут быть признаны только действия индивидов, независимых групп или организаций. Любая форма кибератак, предпринимаемая правительственными и иными государственными организациями является проявлением кибервойны
+                            
+                          </p>
+                        </div>
+                        <div class="task__answer answer">
+                          <h3 class="task__title answer__title">Анализ риска</h3>
+                          <p class="task__text answer__text">С повышением уровня напряженности в мировом пространстве угроза кибертерроризма будет всегда, более того, в ряде стран она может быть одной из составляющих государственной политики. В странах, для которых проблема киберпреступности является особенно острой (это в первую очередь - Российская Федерация), принимаются не только технические, но и законодательные меры, направленные на противодействие киберпреступности и кибертерроризму. Методы, применяемые кибертеррористами, во многом совпадают с методами, которыми пользуются киберпреступники, то и действия руководителей компаний, организаций должны быть направлены на сохранение непрерывности бизнеса и соблюдение мер информационной безопасности.</p>
+                        </div>
+                      </div>
+                      
+                      <div class="case__task task">
+                        <div class="task__question question">
+                          <h3 class="task__title question__title">Что из себя представляет?</h3>
+                          <p class="task__text question__text">
+                            Кибервойна - военные действия, осуществляемые не физически, а электронно, когда в качестве оружия выступает информация, а инструментами являются компьютеры и интернет. Кибервойна, таким образом, является одним из видов информационной войны, задача которой — достичь определенных целей в экономической, политической, военной и других областях посредством воздействия на общество и власть тщательно подготовленной информацией.
+                            
+                          </p>
+                        </div>
+                        <div class="task__answer answer">
+                          <h3 class="task__title answer__title">Анализ риска</h3>
+                          <p class="task__text answer__text">
+                            Большинство государств серьёзно обеспокоились безопасностью своих информационных систем и добавили ее в национальную стратегию обороны. По факту, интернет-пространство стало новым полем для ведения военных действий. В Россиийской Федерации в 2014 году созданы войска информационной безопасности. В Китае также состоят на службе порядка 20 тысяч хакеров. Кроме указанных стран, к кибервойне также готовятся Иран, европейские страны. Главная цель кибервойск — защита инфраструктуры страны и ответное воздействие на противников, которое представляет собой нанесение вреда с использованием всех доступных технологий.
+                            
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="case__nav">
+                    <div class="slider__buttons">
+                      <div class="slider__btn slider__prev prev"><svg width="48" height="21" viewBox="0 0 48 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.1498 21L11.9387 19.2227L4.85921 12.1765L48 12.1765L48 9.65546L4.85921 9.65546L11.9387 2.60924L10.1498 0.831926L3.44634e-06 10.916L10.1498 21Z" fill="#1A3D8A"/>
+</svg>
+                      </div>
+                      <div class="slider__count count"><span class="count__now now">1</span><span class="count__sep sep">/</span><span class="count__all all">4</span></div>
+                      <div class="slider__btn slider__next next"><svg width="49" height="20" viewBox="0 0 49 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M38.3752 0L36.5863 1.7625L43.6658 8.75H0.525024V11.25H43.6658L36.5863 18.2375L38.3752 20L48.525 10L38.3752 0Z" fill="#1A3D8A"/>
+</svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section help" id="help" data-section-name="help">
+        <div class="help__container container">
+          <div class="help__row row">
+            <div class="points__title section-title">
+              <h1 class="section-title__text">КАК ЖЕ ЗАЩИТИТЬ СЕБЯ?</h1>
+              <p class="section-title__subtext">Меры по обеспечению информационной безопасности</p>
+            </div>
+            
+            <dl class="help__grid">
+              <div class="help__item save">
+                <dt class="save__name">Используйте лицензионное программное обеспечение</dt>
+                <dd class="save__image"><img src="./images/save1.svg" alt=""></dd>
+              </div>
+              
+              <div class="help__item save">
+                <dt class="save__name">Не передавайте конфиденциальную информацию 3-м лицам</dt>
+                <dd class="save__image"><img src="./images/save2.svg" alt=""></dd>
+              </div>
+              
+              <div class="help__item save">
+                <dt class="save__name">Используйте двухфакторную аутентификацию</dt>
+                <dd class="save__image"><img src="./images/save3.svg" alt=""></dd>
+              </div>
+              
+              <div class="help__item save">
+                <dt class="save__name">Используйте антивирусные программы</dt>
+                <dd class="save__image"><img src="./images/save4.svg" alt=""></dd>
+              </div>
+              
+              <div class="help__item save">
+                <dt class="save__name">Используйте браузер с самыми последними обновлениями</dt>
+                <dd class="save__image"><img src="./images/save5.svg" alt=""></dd>
+              </div>
+              
+              <div class="help__item save">
+                <dt class="save__name">Пользуйтесь современной операционной системой</dt>
+                <dd class="save__image"><img src="./images/save6.svg" alt=""></dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+      <section class="section how" id="how" data-section-name="how">
+        <div class="how__container container">
+          <div class="how__row row">
+            <div class="info">
+              <div class="info__line">
+                <div class="how__about info__about">
+                  <h1 class="how__title info__title">Кто обеспечивает информационную безопасность в России?</h1>
+                  <p class="how__text info__text">Государственные органы РФ, контролирующие деятельность в области защиты информации:</p>
+                  <ul class="info__list">
+                    <li>Комитет Государственной думы по безопасности</li>
+                    <li>Совет безопасности России</li>
+                    <li>Федеральная служба по техническому и экспортному контролю (ФСТЭК России)</li>
+                    <li>Федеральная служба безопасности Российской Федерации (ФСБ России)</li>
+                    <li>Федеральная служба охраны Российской Федерации (ФСО России)</li>
+                    <li>Служба внешней разведки Российской Федерации (СВР России)</li>
+                    <li>Министерство обороны Российской Федерации (Минобороны России)</li>
+                  </ul><a class="how__order info__order anchor green-btn" href="#videos">Перейти к видеороликам</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section videos" id="videos" data-section-name="videos">
+        <div class="videos__container container">
+          <div class="videos__row row">
+            <div class="videos__title section-title">
+              <h1 class="section-title__text">Видеоролики</h1>
+              <p class="section-title__subtext">Небольшие видеоролики объясняющие правила поведения в сети для всех возрастов</p>
+            </div>
+            
+            <div class="videos__line">
+              <div class="videos__item video"><img class="video__caption caption" src="./images/video1-caption.jpg" alt="">
+                <div class="video__content content">
+                  <h3 class="video__title">11 Советов по безопасности в интернете</h3>
+                  <p class="video__about">Видеоролик о правилах поведения в сети</p><a class="video__choice green-btn" href="https://youtu.be/wqu-9qGRIHU" data-fancybox="video">Смотреть</a>
+                </div>
+              </div>
+              
+              <div class="videos__item video"><img class="video__caption caption" src="./images/video2-caption.jpg" alt="">
+                <div class="video__content content">
+                  <h3 class="video__title">Безопасность детей в интернете</h3>
+                  <p class="video__about">Видеоролик о том как защитить своих детей от влияния интернета</p><a class="video__choice green-btn" href="https://youtu.be/3oxmLInP5_E" data-fancybox="video">Смотреть</a>
+                </div>
+              </div>
+              
+              <div class="videos__item video"><img class="video__caption caption" src="./images/video3-caption.jpg" alt="">
+                <div class="video__content content">
+                  <h3 class="video__title">Как защитить смартфон от взлома</h3>
+                  <p class="video__about">Видеоролик о защите смартфона от взлома и о том, как узнать, был ли он взломан</p><a class="video__choice green-btn" href="https://youtu.be/HFyT3XQVDAA" data-fancybox="video">Смотреть</a>
+                </div>
+              </div>
+            </div>
+            <p class="videos__note">Информация носит исключительно информационный характер и ни при каких условиях не является публичной офертой.</p>
+          </div>
+        </div>
+      </section>
+      <section class="section why-we" id="why-we" data-section-name="why-we">
+        <div class="why-we__container container">
+          <div class="why-we__row row">
+            <div class="why-we__title section-title">
+              <h1 class="section-title__text">Почему следует соблюдать информационную безопасность</h1>
+              <p class="section-title__subtext">«Терра Тех» обладает внушительным опытом поиска и анализа любой доступной пространственной информации на территории земного шара за любой период времени</p>
+            </div>
+            
+            <div class="why-we__grid">
+              <div class="why-we__item advantage">
+                <div class="advantage__head">
+                  <div class="advantage__icon"><img src="./images/advantage1.svg" alt=""></div>
+                  <h3 class="advantage__title">Это довольно легко</h3>
+                </div>
+                <p class="advantage__text">Вам не нужно быть программистом или инженером, достаточно следовать уже выработанным рекомендациям от более опытных людей по итогам которых с Вашими личными данными всё будет в порядке. </p>
+              </div>
+              
+              <div class="why-we__item advantage">
+                <div class="advantage__head">
+                  <div class="advantage__icon"><img src="./images/advantage2.svg" alt=""></div>
+                  <h3 class="advantage__title">Устройство будет работать быстрее</h3>
+                </div>
+                <p class="advantage__text">Не секрет, что если на устройстве будет много вирусов - оно начнёт сильно тормозить. Следует не допускать их появления на вашей технике и они не потеряют в производительности</p>
+              </div>
+              
+              <div class="why-we__item advantage">
+                <div class="advantage__head">
+                  <div class="advantage__icon"><img src="./images/advantage3.svg" alt=""></div>
+                  <h3 class="advantage__title">Большой выбор инструментов</h3>
+                </div>
+                <p class="advantage__text">За последние года было создано множество вирусов, но и столько же антивирусных программ, каждый найдёт нужный ему инструмент и сможет минимизировать количество вирусов на компьютере.</p>
+              </div>
+              
+              <div class="why-we__item advantage">
+                <div class="advantage__head">
+                  <div class="advantage__icon"><img src="./images/advantage4.svg" alt=""></div>
+                  <h3 class="advantage__title">Конфиденциальность</h3>
+                </div>
+                <p class="advantage__text">Абсолютная конфиденциальность является одним из главных принципов личной жизни человека. Если на вашем компьютере будут вирусы - хакеры смогут следить за вашими действиями в социальных сетях и иных сервисах</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section questions" id="questions" data-section-name="questions">
+        <div class="questions__container container">
+          <div class="questions__row row">
+            <div class="questions__title section-title">
+              <h1 class="section-title__text">Поведение при нарушении информационной безопасности </h1>
+            </div>
+            
+            <div class="questions__answers answers accordeon">
+              <div class="answers__answer answer">
+                <h3 class="answer__title answer-title">
+                   Мой компьютер взломали. Что делать?
+                  <div class="answer-title__plus"></div>
+                </h3>
+                <div class="answer__content answer-content">
+                  <p class="answer__paragraph">
+                    Необходимо сначала принять меры безопасности исключающие несанкционированный доступ к Вашему ПК (персональному компютеру).
+                    
+                    Необходимо проверить антивирусной программой и утилитами для нахождения и удаления вирусов, троянов (других шпионских и вредоносных программ) Ваш ПК. 
+                  </p>
+                  <p class="answer__paragraph">После проверки, если найдены и уничтожены вирусы (трояны и др.) , перегрузите Ваш компьютер, нажимая (кликая мышкой) последовательно ссылки, кнопку "Пуск"> "Завершение работы"> "Перегрузить компьютер" и снова просканируйте антивирусом свой компьютер. </p>
+                  <p class="answer__paragraph">Ни в каких программах, на жестких дисках ПК, не сохраняйте свои пароли, иначе они могут быть похищены. Можно сохранять пароли на сменных носителях (дискетах, flash картах, CD-DVD) или на бумаге, только нужно исключить к ним доступ посторонних. </p>
+                </div>
+              </div>
+              
+              <div class="answers__answer answer">
+                <h3 class="answer__title answer-title">
+                   Мою банковскую карту взломали. Что мне делать?
+                  <div class="answer-title__plus"></div>
+                </h3>
+                <div class="answer__content answer-content">
+                  <p class="answer__paragraph">
+                    Самое первое, что должно делать в такой ситуации – это звонок в банк или онлайн-консультация со специалистом. Сейчас даже получить займ онлайн не проблема, а написать в чат дежурному менеджеру, тем более. Поэтому, звоните, пишите или идите в ближайший офис банка, если с гаджетами на «ВЫ». Так же, очень важно знать причину, почему это произошло. Конечно, как правило, взлом карты происходит мошенниками из-за несовершенной системы безопасности.
+                    
+                  </p>
+                  <p class="answer__paragraph">В этому случае необходимо заблокировать дебетовую карту. По банковскому закону, даже съёмные деньги находятся на транзакционном счёте в течение трёх суток. Поэтому, в этот временной промежуток необходимо сообщить банку об отмене операции. В этом случае деньги, в течении ближайшего времени поступят на карту, либо останутся на транзакционном счёте до выяснения обстоятельств.</p>
+                </div>
+              </div>
+              
+              <div class="answers__answer answer">
+                <h3 class="answer__title answer-title">
+                   Мой аккаунт в социальной сети взломали. Что делать?
+                  <div class="answer-title__plus"></div>
+                </h3>
+                <div class="answer__content answer-content">
+                  <p class="answer__paragraph"></p>
+                  <ul class="answer__list">
+                    <li class="answer__elem">
+                      <p class="answer__paragraph">Выполните полную проверку антивирусом, желательно при этом физически отключить компьютер от Интернета и локальной сети (выдернув кабель). Начинать следует именно с этого: если пароль был украден вирусом, то после установки нового пароля его мгновенно украдут повторно. </p>
+                    </li>
+                    <li class="answer__elem">
+                      <p class="answer__paragraph">Смените пароль на новый на странице в своей социальной сети (нужный пункт следует искать в настройках), на привязанном к ней ящике электронной почты и других важных сайтах. </p>
+                    </li>
+                    <li class="answer__elem">
+                      <p class="answer__paragraph">Если доступ к странице не удаётся восстановить с помощью восстановления пароля, срочно обратитесь в службу поддержки со страницы друга за помощью. </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="answers__answer answer">
+                <h3 class="answer__title answer-title">
+                   Мои персональные данные украли. Что делать?
+                  <div class="answer-title__plus"></div>
+                </h3>
+                <div class="answer__content answer-content">
+                  <p class="answer__paragraph">
+                    Обратитесь в полицию
+                    
+                  </p>
+                  <p class="answer__paragraph">Вы также можете сообщить о краже личных данных в местное отделение полиции. Если вы решили обратиться в полицию, возьмите копию отчета о краже личных данных, удостоверение личности государственного образца с фотографией, подтверждение текущего адреса и любое доказательство того, что вы стали жертвой кражи личных данных, например требование о погашении задолженности. Не забудьте попросить копию полицейского отчета на случай, если он вам понадобится. Запишите номер телефона следователя для последующих обращений.</p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section quiz-start section-blue" id="quiz-start" data-section-name="quiz-start">
+        <div class="quiz-start__container container">
+          <div class="quiz-start__row row">
+            <div class="quiz-start__title section-title">
+              <h1 class="section-title__text">Пройдите тестирование </h1>
+            </div>
+            
+            <div class="quiz-start__invite invite">
+              <h3 class="invite__about">По имеющемуся на сайте материалу было составлено небольшое тестирование. По итогам его прохождения Вы узнаете Ваш уровень знаний по информационной безопасности.</h3>
+              <button class="quiz-start__activate green-btn" type="button">Пройти тестирование</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="footer">
+      <div class="footer__container container">
+        <div class="footer__row"><a class="footer__logo logo" href="./index.html"><img class="logo__decor decor" src="./images/decor.svg" alt="">
+            <p class="logo__text">Информационная<br>Безопасность</p></a><span class="footer__company">ГАПОУ МО "Егорьевский техникум"</span><a class="footer__link" href="https://github.com/DmiDrok/information-security-2023" target="_blank">Исходный код проекта</a></div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,323 @@
+// === Описание логотипа ===
+.logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: opacity ease .2s;
+  color: #fff;
+  font-size: 12px;
+
+  &:hover {
+    opacity: .8;
+  }
+
+  &__main {
+    transform: translateX(-30%);
+  }
+
+  &__text {
+    margin: 0 0 0 15px;
+    line-height: 13px;
+  }
+}
+
+// === Описание точек-переключателей ===
+.dots {
+  position: fixed;
+  right: 40px;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+
+  .dot {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin: 0 0 15px 0;
+    }
+
+    &::before {
+      content: "";
+      transform: scale(0);
+      background: #099e7d;
+      width: 65%;
+      height: 65%;
+      display: block;
+      border-radius: 50%;
+      transition: transform ease .3s;
+    }
+
+    &:hover {
+      opacity: .6;
+    }
+
+    &.active::before {
+      transform: scale(1);
+    }
+
+  }
+}
+
+
+// === Описание кнопки оформления заказа ===
+.green-btn {
+  padding: 17px 52px;
+  border-radius: 25px;
+  box-shadow: 0px 10px 20px rgba(0, 191, 150, 0.3);
+  background: #00BF96;
+  color: #fff;
+  font-weight: 400;
+  font-size: 17px;
+  letter-spacing: 2%;
+  display: inline-block;
+  transition-timing-function: ease;
+  transition-property: box-shadow, background;
+  transition-duration: .4s;
+
+  &:hover {
+    box-shadow: 0px 5px 30px rgba(0, 191, 150, 0.6);
+    background: #00c499;
+  }
+}
+
+// === Описание заголовка секций ===
+.section-title {
+  text-align: center;
+
+  &__text {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+  }
+
+  &__subtext {
+    margin: 20px 0 0 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+  }
+}
+
+// === Настройка pdf и Fancybox ===
+.fancybox {
+  &__slide {
+    padding: 10px 50px !important;
+  }
+
+  &__content {
+    height: 90% !important;
+  }
+}
+
+
+// === Описание синих секций ===
+.section-blue {
+  background: $bg-blue;
+}
+
+// === Блок с информацией (текст - картинка), чаще всего на синем фоне ===
+.info {
+  margin: auto 0;
+
+  &__line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__about {
+    flex: 0 1 40%;
+    color: #fff;
+  }
+
+  &__title {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    text-transform: uppercase;
+  }
+  
+  &__text {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 27px;
+    margin: 30px 0 0 0;
+  }
+
+  &__order {
+    margin: 30px 0 0 0;
+    padding: 15px 72px !important;
+  }
+}
+
+// === Квиз ===
+.quiz {
+  background: rgba(0, 0, 0, .7);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity ease .5s;
+  
+  &.active {
+    z-index: 10000;
+    opacity: 1;
+  }
+
+  // Содержимое блока квиза
+  .content {
+    position: absolute;
+    width: 90%;
+    // height: 90%;
+    background: #fff;
+    border-radius: 6px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-family: "Roboto", sans-serif;
+      font-size: 30px;
+      background: none;
+      transition: color ease .3s;
+
+      &:hover {
+        color: #00c499;
+      }
+
+      @media (max-height: 680px) {
+        top: 40px;
+        right: 40px;
+      }
+    }
+  }
+
+  .quiz-main {
+    padding: 70px 30px;
+
+    .question {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 35px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+
+      .question-title { 
+        margin: 0 0 0 25px;
+        line-height: 40px;
+      }
+
+      &__next-block {
+        flex: 1 1 auto;
+        padding: 0 50px 0 0;
+        margin: 0 0 0 25px;
+      }
+
+      &__next {
+        padding: 12px 45px;
+        font-size: 20px;
+        letter-spacing: 1px;
+        display: inline-block;
+        float: right;
+        opacity: 0;
+        transition: opacity ease .4s, box-shadow ease .4s;
+        cursor: default;
+
+        &.active {
+          opacity: 1;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &__list {
+      margin: 50px 0 0 0;
+    }
+
+    &__variant {
+      padding: 30px;
+      font-weight: 500;
+      font-size: 19px;
+      line-height: 27px;
+      transition: box-shadow ease .4s;
+      cursor: pointer;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 40px;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 3px solid #099e7d;
+        display: block;
+        transition-duration: .5s, .2s;
+        transition-timing-function: ease;
+        transition-property: opacity, background;
+        opacity: 0;
+      }
+
+      &:hover {
+        box-shadow: inset 0px 2px 10px #ccc;
+      }
+      
+      &:hover::before {
+        opacity: 1;
+      }
+
+      &:active::before {
+        background: #099e7d;
+      }
+      
+      // Активное состояние варианта ответа
+      &.active {
+        opacity: .9;
+        box-shadow: inset 0px 2px 10px #ccc;
+      }
+      
+      &.active::before {
+        opacity: 1;
+        background: #099e7d;
+      }
+    }
+
+    &__variant:not(:last-child) {
+      border-bottom: 2px solid #E2E7F0;
+    }
+
+    &__count {
+      margin: 0 0 0 30px;
+      letter-spacing: 10px;
+    }
+
+    &__result {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 27px;
+      width: 70%;
+    }
+
+    &__restart {
+      margin: 30px 0 0 0;
+    }
+  }
+}

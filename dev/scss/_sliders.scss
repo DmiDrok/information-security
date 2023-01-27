@@ -1,0 +1,29 @@
+
+
+.slick-list {
+  overflow: hidden;
+}
+
+.case__aside {
+  &.slick-slider {
+    max-width: 300px;
+  }
+
+  .slick-slide {
+    max-width: 300px;
+  }
+}
+
+.slick-track {
+  display: flex;
+}
+
+.case__content {
+  &.slick-slider {
+    max-width: 750px;
+  }
+
+  .slick-slide {
+    max-width: 750px;
+  }
+}

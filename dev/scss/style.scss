@@ -1,0 +1,828 @@
+@import "null";
+@import "vars";
+@import "all";
+@import "fonts";
+@import "sliders";
+
+
+.container {
+  max-width: 1240px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.row {
+  padding: 70px 0;
+
+  @media (max-height: 800px) {
+    padding: 30px 0;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+  min-width: 1240px;
+  color: $text-color-black;
+
+  &.unscroll {
+    overflow: hidden;
+  }
+}
+
+
+// === Описание шапки ===
+.header {
+  overflow: hidden;
+  background: $bg-blue;
+  height: 100vh;
+  padding: 10px 0;
+
+  &__container {
+    height: 100%;
+  }
+
+  &__row {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // Верхняя часть с навигацией
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+
+    &__list {
+      display: flex;
+      align-items: center;
+    }
+    
+    &__elem:not(:last-child) {
+      margin: 0 50px 0 0;
+    }
+    
+    &__link {
+      transition: color ease .4s;
+      color: #fff;
+      font-size: 17px;
+      font-weight: 400;
+      &:hover { color: #00BF96; } 
+    }
+    
+    .tel {
+      transition: opacity ease .2s;
+      color: #fff;
+      font-weight: 400;
+      font-size: 17px;
+      letter-spacing: 2%;
+      display: flex;
+      align-items: center;
+
+      &:hover { opacity: .7; }
+
+      &__icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #fff;
+        margin: 0 0 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  // Часть с красивыми словами
+  .promo {
+    margin: auto 0;
+    color: #fff;
+    position: relative;
+    
+    &__line {
+      display: flex;
+    }
+
+    &__about {
+      flex: 0 1 50%;
+    }
+
+    &__title {
+      font-family: "Bebas Neue";
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 60px;
+      white-space: nowrap;
+    }
+
+    &__text {
+      margin: 30px 0 0 0;
+      width: 60%;
+      line-height: 27px;
+      font-weight: 400;
+      font-size: 17px;
+    }
+
+    &__order {
+      margin: 40px 0 0 0;
+    }
+
+    &__image {
+      position: relative;
+    }
+
+    &__image img {
+      position: absolute;
+      pointer-events: none;
+      will-change: transform;
+
+      &.earth {
+        z-index: 1;
+        top: -34px;
+        left: -370px;
+        width: 900px;
+      }
+
+      &.sputnik {
+        z-index: 2;
+        top: -228px;
+        left: 135px;
+        width: 333px;
+      }
+
+      &.light {
+        z-index: 3;
+        left: 62px;
+        top: -58px;
+        width: 200px;
+      }
+
+      &.stars {
+        z-index: 0;
+        top: -120px;
+        left: -260px;
+      }
+    }
+  }
+
+  @media (max-width: 930px) {
+    height: 150vh !important;
+  }
+}
+
+
+// === Описание блока с пунктами ===
+.points {
+  background: $bg-white;
+  display: flex;
+
+  &__container {
+    margin: auto;
+  }
+
+  &__grid {
+    margin: 50px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(3, 270px);
+    grid-gap: 60px 0;
+    justify-content: space-between;
+    
+    .point {
+      flex: 0 1 33.333%;
+      cursor: default;
+      
+      &__title {
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        
+        .decor img {
+          width: 55px;
+        }
+
+        h3 {
+          margin: 0 0 0 10px;
+          white-space: nowrap;
+        }
+      }
+
+      &__about {
+        margin: 30px 0 0 0;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 27px;
+      }
+    }
+
+    @media (max-width: 570px) {
+      grid-template-columns: repeat(2, min-content);
+      justify-content: space-evenly;
+    }
+  }
+}
+
+
+// === Описание блока с примерами ===
+.examples {
+  margin: 30px 0 0 0;
+  background: $bg-green;
+
+  .section-title {
+    text-align: start !important;
+
+    &__text {
+      color: #fff;
+    }
+  }
+
+  .slider {
+    margin: 50px 0 0 0;
+    background: #fff;
+    box-shadow: 0px 4px 50px rgba(26, 61, 138, 0.15);
+
+    .case {
+      padding: 50px;
+      
+      &__line {
+        display: flex;
+      }
+
+      &__aside {
+        flex: 0 1 30%;
+      }
+
+      &__content {
+        margin: 0 0 0 50px;
+      }
+
+      &__title {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 27px;
+        color: #1A3D8A;
+      }
+
+      &__image {
+        margin: 45px 0 0 0;
+        position: relative;
+        height: 400px;
+
+        img {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 4px;
+        }
+      }
+
+      &__see {
+        background: #1A3D8A;
+        border-radius: 25px;
+        padding: 13px 42px;
+        color: #fff;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 17px;
+        letter-spacing: 2%;
+        margin: 0 0 0 50px;
+        transition: background ease .4s;
+
+        &:hover {
+          background: #00BF96;
+        }
+      }
+
+      &__nav {
+        padding: 50px 0 0 0;
+        display: flex;
+
+        @media (max-height: 800px) {
+          padding: 30px 0 0 0;
+        }
+      }
+
+      @media (max-width: 570px) {
+        &__content {
+          margin: 50px 0 0 0;
+        }
+
+        &__line {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        &__nav {
+          padding: 60px 0 0 0;
+          justify-content: center;
+        }
+      }
+    }
+
+    &__buttons {
+      width: 27%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__btn {
+      cursor: pointer;
+      transition: opacity ease .4s;
+
+      svg path {
+        transition: fill ease .3s, transform ease .1s;
+      }
+
+      &:hover svg path {
+        fill: #00BF96;
+      }
+
+      &:active svg path {
+        transform: scale(.95);
+      }
+    }
+
+    &__count {
+      color: #333333;
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      font-size: 19px;
+      line-height: 27px;
+    }
+
+    .task {
+      height: 100%;
+
+      &__title {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 20px;
+        letter-spacing: 1%;
+      }
+      
+      &__text {
+        margin: 20px 0 0 0;
+        font-weight: 300;
+        line-height: 27px;
+      }
+
+      .question {
+        &__text {
+          font-size: 20px;
+        }
+      }
+
+      .answer {
+        margin: 50px 0 0 0;
+
+        &__text {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+}
+
+
+// === Блок с тем, кому могут помочь ===
+.help {
+  display: flex;
+
+  &__container {
+    margin: auto;
+    width: 100%;
+  }
+
+  &__grid {
+    margin: 50px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    grid-gap: 40px 0;
+    justify-content: space-between;
+    justify-items: start;
+
+    .save {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+
+      &__name {
+        margin: 0 0 0 30px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 25px;
+      }
+    }
+
+    @media (max-width: 570px) {
+      grid-template-columns: repeat(2, min-content);
+      justify-content: space-evenly;
+    }
+  }
+}
+
+
+// === Блок с описанием как сделать заказ ===
+.how {
+  background: $bg-blue;
+
+  &__container {
+    height: 100%;
+  }
+
+  &__row {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__about {
+    flex: initial !important;
+    text-align: center;
+  }
+
+  .info__list {
+    margin: 25px 0 0 0;
+
+    li {
+      margin: 15px 0 0 0;
+      font-weight: 600;
+    }
+  }
+}
+
+// === Описание секции с тарифами ===
+.videos {
+  display: flex;
+
+  &__container {
+    margin: auto;
+  }
+
+  &__line {
+    margin: 50px 0 0 0;
+    display: flex;
+
+    .video {
+      flex: 0 1 33.333%;
+      box-shadow: 0px 0px 40px rgba(26, 61, 138, 0.3);
+      height: 450px;
+      text-align: center;
+      font-family: "Roboto", sans-serif;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin: 0 80px 0 0;
+      }
+
+      &:hover .content {
+        transform: translateY(0);
+      }
+
+      &__caption {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        object-fit: cover;
+      }
+
+      &__content {
+        color: #fff;
+        z-index: 10;
+        position: relative;
+        background: linear-gradient(0deg, #04a07e, transparent);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 10px;
+        transition: transform ease 0.6s;
+        transform: translateY(100%);
+      }
+
+      &__title {
+        font-weight: 500;
+        font-size: 20px;
+      }
+
+      &__about {
+        margin: 40px 0 0 0;
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 27px;
+      }
+
+      &__choice {
+        margin: 30px 0 0 0;
+        width: 80%;
+
+        &:hover {
+          background: #08d3a4;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .content {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+
+  &__note {
+    margin: 45px 0 0 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+  }
+  
+  .document {
+    margin: 55px 0 0 0;
+    font-family: "Roboto", sans-serif;
+    
+    &__link {
+      display: inline-flex;
+      align-items: center;
+      color: $text-color-black;
+      font-weight: 500;
+      font-size: 23px;
+      transition: opacity ease .3s;
+
+      &:hover {
+        opacity: .5;
+      }
+    }
+
+    &__icon {
+      margin: 0 0 0 20px;
+    }
+  }
+}
+
+
+// === Описание секции "О сервисе" ===
+.about {
+  &__container {
+    height: 100%;
+  }
+
+  &__row {
+    height: 100%;
+    display: flex;
+  }
+}
+
+// === Описание секции "Почему мы" ===
+.why-we {
+  &__grid {
+    margin: 50px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 70px 60px;
+  }
+
+  .advantage {
+    font-family: "Roboto", sans-serif;
+
+    &__head {
+      display: flex;
+      align-items: center;
+    }
+
+    &__icon {
+      padding: 20px 30px;
+      border-radius: 15px;
+      background: #fff;
+      box-shadow: 0px 0px 40px rgba(26, 61, 138, 0.2);
+    }
+
+    &__title {
+      margin: 0 0 0 20px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 27px;
+      white-space: nowrap;
+    }
+
+    &__text {
+      margin: 20px 0 0 0;
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 27px;
+    }
+  }
+}
+
+
+// === Описание блока с ответами на вопросы  ===
+.questions {
+  &__container {
+    height: 100%;
+  }
+
+  &__row {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin: 0 0 20px 0;
+  }
+
+  .answers {
+    margin: auto 0;
+    box-shadow: 0px 4px 50px rgba(26, 61, 138, 0.15);
+    border-radius: 4px;
+
+    .answer {
+      padding: 30px 40px;
+      cursor: pointer;
+      transition: opacity ease .4s;
+
+      &:hover {
+        opacity: .7;
+      }
+
+      
+      &:not(:last-child) {
+        border-bottom: 2px solid #E2E7F0;
+      }
+
+      &.active {
+        .answer-title {
+          &__plus {
+            transform: rotate(45deg);
+          }
+        }
+
+        .answer-content {
+          margin: 20px 0 0 0;
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+      
+      &__paragraph:not(:first-child) {
+        margin: 20px 0 0 0;
+      }
+
+      .answer-title {
+        position: relative;
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 27px;
+
+        &__plus {
+          position: absolute;
+          top: 50%;
+          transform: translate(0, -50%);
+          right: 0;
+          transition: transform ease .4s;
+          
+          &::before,
+          &::after {
+            content: "";
+            display: block;
+            width: 26px;
+            height: 2px;
+            background: $bg-green;
+          }
+          
+          &::before {
+            transform: rotate(90deg) translateX(2px);
+          }
+        }
+      }
+
+      &__content {
+        max-height: 0;
+        overflow: hidden;
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 30px;
+        transition: all ease .5s;
+
+        ul {
+          margin: 10px 0 0 0;
+          list-style: disc !important;
+          padding: 0 0 0 20px;
+        }
+        li { list-style: disc !important; }
+        li p { font-size: 15px; }
+      }
+    }
+  }
+
+  @media (max-width: 1035px) {
+    .answers {
+      margin: 50px 0 0 0;
+    }
+
+    &__container {
+      height: initial;
+      margin: auto 0;
+    }
+  }
+}
+
+
+// === Подвал сайта ===
+.footer {
+  background: #fff;
+
+  &__row {
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #646464;
+  }
+
+  .logo {
+    &__text {
+      color: #646464;
+    }
+  }
+
+  &__company {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 45px;
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 13px;
+    color: #646464;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+// === Описание секции с приглашением пройти квиз ===
+.quiz-start {
+  .section-title {
+    color: #fff;
+  }
+
+  &__container {
+    height: 100%;
+  }
+
+  &__row {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .invite {
+    color: #fff;
+    width: 50%;
+    margin: 50px auto 0 auto;
+
+    &__about {
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 27px;
+      text-align: center;
+    }
+  }
+
+  &__activate {
+    margin: 40px auto 0 auto;
+    display: block !important;
+  }
+}

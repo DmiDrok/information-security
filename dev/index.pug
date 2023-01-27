@@ -1,0 +1,465 @@
+doctype html
+html(lang="ru")
+  include includes/head
+
+  body
+    include includes/dots
+    include includes/quiz
+
+    //- Шапка - большой полноэкранный блок
+    header.section.header.section-blue#header(data-section-name="header")
+      .header__container.container
+        .header__row
+          nav.header__nav.nav
+            a(href="./index.html").header__logo.logo
+              img.logo__decor.decor(src="./images/decor.svg" alt="")
+              
+              p.logo__text
+                | Информационная
+                br
+                | Безопасность
+            |
+            |
+            ul.nav__list
+              li.nav__elem
+                a(href="#points").nav__link.anchor Термины
+              li.nav__elem
+                a(href="#examples").nav__link.anchor Примеры опасностей
+              li.nav__elem
+                a(href="#videos").nav__link.anchor Видеоролики
+              li.nav__elem
+                a(href="#questions").nav__link.anchor Вопросы
+          .header__promo.promo
+            .promo__line
+              .promo__about
+                h1.promo__title
+                  | Соблюдайте принципы
+                  br
+                  | Информационной безопасности
+                p.promo__text
+                  | Разбираемся в терминах и рисках информационных угроз.
+                  br
+                  | Учимся защищать себя.
+                a(href="#points").promo__order.green-btn.anchor Перейти к терминам
+              .promo__image
+                picture
+                  source(srcset="./images/earth.webp 1x")
+                  img.earth(src="./images/earth.png" alt="")
+
+                picture
+                  source(srcset="./images/sputnik.webp 1x")
+                  img.sputnik(src="./images/sputnik.png" alt="")
+
+
+                img.light(src="./images/light.svg" alt="")
+                img.stars(src="./images/stars.svg" alt="")
+  
+    main.main
+
+      //- Пункты
+      section.section.points#points(data-section-name="points")
+        .points__container.container
+          .points__row.row
+            .points__title.section-title
+              h1.section-title__text НАБОР ТЕРМИНОВ И ОПРЕДЕЛЕНИЙ, ЧАСТО ВСТРЕЧАЮЩИХСЯ В СФЕРЕ ИНФОРМАЦИОННОЙ БЕЗОПАСНОСТИ
+              p.section-title__subtext.
+                Под информационной безопасностью (ИБ) следует понимать защиту
+                интересов субъектов информационных отношений. Ниже описаны основные
+                ее составляющие – конфиденциальность, целостность, доступность.
+            
+            dl.points__grid
+              .points__item.point
+                dt.point__title
+                  .decor
+                    img(src="./images/decor.svg" alt="")
+                  h3 Конфиденциальность
+                dd.point__about состояние информации, при котором ознакомиться с ней могут только уполномоченные лица.
+              .points__item.point
+                dt.point__title
+                  .decor
+                    img(src="./images/decor.svg" alt="")
+                  h3 Целостность
+                dd.point__about состояние информации, при котором изменять её могут только уполномоченные лица.
+              .points__item.point
+                dt.point__title
+                  .decor
+                    img(src="./images/decor.svg" alt="")
+                  h3 Доступность
+                dd.point__about возможность получения авторизованного доступа к информации со стороны уполномоченных лиц.
+              .points__item.point
+                dt.point__title
+                  .decor
+                    img(src="./images/decor.svg" alt="")
+                  h3 Пароль
+                dd.point__about секретный набор символов, позволяющий подтвердить соответствие субъекта предъявленному им идентификатору.
+              .points__item.point
+                dt.point__title
+                  .decor
+                    img(src="./images/decor.svg" alt="")
+                  h3 Идентификатор
+                dd.point__about уникальный набор символов, однозначно соответствующий объекту или субъекту в данной системе.
+              .points__item.point
+                dt.point__title
+                  .decor
+                    img(src="./images/decor.svg" alt="")
+                  h3 Информация
+                dd.point__about данные, представленные в виде, пригодном для хранения, обработки и передачи, и представляющие определенную ценность.
+
+
+      //- Примеры
+      section.section.examples#examples(data-section-name="examples")
+        .examples__container.container
+          .examples__row.row
+            .examples__title.section-title
+              h1.section-title__text Примеры информационных опасностей и угроз
+
+              .examples__slider.slider
+                .slider__case.case
+                  .case__line
+                    .case__aside
+                      .case__aside_elem
+                        h2.case__title Информационная угроза — утечка информации
+                        .case__image
+                          //- picture
+                            //- source(srcset="./images/utechka.webp 1x")
+                          img(src="./images/utechka.jpg" alt="")
+                      |
+                      |
+                      .case__aside_elem
+                        h2.case__title Информационная угроза — несанкционированный доступ
+                        .case__image
+                          //- picture
+                          //-   source(srcset="./images/access.webp 1x")
+                          img(src="./images/access.jpg" alt="")
+                      |
+                      |
+                      .case__aside_elem
+                        h2.case__title Информационная угроза - кибертерроризм
+                        .case__image
+                          //- picture
+                          //-   source(srcset="./images/case1.webp 1x")
+                          img(src="./images/terr.jpg" alt="")
+                      |
+                      |
+                      .case__aside_elem
+                        h2.case__title Информационная угроза - кибервойна
+                        .case__image
+                          //- picture
+                            //- source(srcset="./images/case2.webp 1x")
+                          img(src="./images/cyberwar.jpg" alt="")
+
+                    |
+                    |
+                    .case__content
+                      .case__task.task
+                        .task__question.question
+                          h3.task__title.question__title Что из себя представляет?
+                          p.task__text.question__text.
+                           Утечка информации - это неконтролируемое распространение информации за пределы организации, помещения, здания, какой-либо территории, а также определенного круга лиц, которые имеют доступ к этой информации. В случае обнаружения утечки важно своевременно ее ликвидировать, но лучше всего заранее принять превентивные меры по защите информации с ограниченным доступом.
+
+                        .task__answer.answer
+                          h3.task__title.answer__title Анализ риска
+                          p.task__text.answer__text.
+                            Для защиты от утечки конфиденциальной информации могут использоваться: системы аутентификации и идентификации, системы криптографической защиты дисковых данных, а также информации, передаваемой по сетям, программные решения для управления ключами шифрования. Возможности средств аутентификации и идентификации позволяют ограничить доступ к ресурсам сети. Для этого у пользователя запрашивается некая информация, которая известна только ему, после чего он получает доступ. Для реализации этой возможности используются: биометрия — физиологические особенности людей (отпечатки пальцев, изображение радужной оболочки глаза и т.д.); конфиденциальная информация — пароли, ключи и прочее.
+                      |
+                      |
+                      .case__task.task
+                        .task__question.question
+                          h3.task__title.question__title Что из себя представляет?
+                          p.task__text.question__text.
+                            Несанкционированный доступ - получение возможности обрабатывать данные, хранящиеся на различных носителях и накопителях, посредством самовольного изменения или фальсификации соответствующих прав и полномочий. Подобное явление имеет место, когда какие-то сведения предназначены только определённому кругу лиц, но существующее ограничение нарушается.
+
+                        .task__answer.answer
+                          h3.task__title.answer__title Анализ риска
+                          p.task__text.answer__text.
+                            Большинство операционных систем предполагает автоматическую встроенную защиту от несанкционированного доступа. Но указанные способы обладают существенным недостатком: они быстро устаревают. Соответственно, специалисты рекомендуют использовать постоянно обновляющийся пакет программ для контроля доступа к отдельным документам. Одними из наиболее надежных признаются аппаратные средства защиты, они чаще всего используются банковскими организациями при выдаче денег. Примерами таких средств могут послужить электронные замки. К повышенным мерам предосторожности относят строгую и усиленную аутентификацию. Особый упор может быть сделан на логировании действий администратора и пользователей.
+                      |
+                      |
+                      .case__task.task
+                        .task__question.question
+                          h3.task__title.question__title Что из себя представляет?
+                          p.task__text.question__text.
+                            Кибертерроризм — комплекс незаконных действий в киберпространстве, создающих угрозу государственной безопасности, личности и обществу,
+                            использование компьютерных и телекоммуникационных технологий (прежде всего, Интернета) в террористических целях. Кибертерроризмом могут быть признаны только действия индивидов, независимых групп или организаций. Любая форма кибератак, предпринимаемая правительственными и иными государственными организациями является проявлением кибервойны
+
+                        .task__answer.answer
+                          h3.task__title.answer__title Анализ риска
+                          p.task__text.answer__text.
+                            С повышением уровня напряженности в мировом пространстве угроза кибертерроризма будет всегда, более того, в ряде стран она может быть одной из составляющих государственной политики. В странах, для которых проблема киберпреступности является особенно острой (это в первую очередь - Российская Федерация), принимаются не только технические, но и законодательные меры, направленные на противодействие киберпреступности и кибертерроризму. Методы, применяемые кибертеррористами, во многом совпадают с методами, которыми пользуются киберпреступники, то и действия руководителей компаний, организаций должны быть направлены на сохранение непрерывности бизнеса и соблюдение мер информационной безопасности.
+                      |
+                      |
+                      .case__task.task
+                        .task__question.question
+                          h3.task__title.question__title Что из себя представляет?
+                          p.task__text.question__text.
+                            Кибервойна - военные действия, осуществляемые не физически, а электронно, когда в качестве оружия выступает информация, а инструментами являются компьютеры и интернет. Кибервойна, таким образом, является одним из видов информационной войны, задача которой — достичь определенных целей в экономической, политической, военной и других областях посредством воздействия на общество и власть тщательно подготовленной информацией.
+
+                        .task__answer.answer
+                          h3.task__title.answer__title Анализ риска
+                          p.task__text.answer__text.
+                            Большинство государств серьёзно обеспокоились безопасностью своих информационных систем и добавили ее в национальную стратегию обороны. По факту, интернет-пространство стало новым полем для ведения военных действий. В Россиийской Федерации в 2014 году созданы войска информационной безопасности. В Китае также состоят на службе порядка 20 тысяч хакеров. Кроме указанных стран, к кибервойне также готовятся Иран, европейские страны. Главная цель кибервойск — защита инфраструктуры страны и ответное воздействие на противников, которое представляет собой нанесение вреда с использованием всех доступных технологий.
+
+                  .case__nav
+                    .slider__buttons
+                      .slider__btn.slider__prev.prev
+                        <svg width="48" height="21" viewBox="0 0 48 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10.1498 21L11.9387 19.2227L4.85921 12.1765L48 12.1765L48 9.65546L4.85921 9.65546L11.9387 2.60924L10.1498 0.831926L3.44634e-06 10.916L10.1498 21Z" fill="#1A3D8A"/>
+                        </svg>
+
+                      .slider__count.count
+                        span.count__now.now 1
+                        span.count__sep.sep /
+                        span.count__all.all 4
+
+                      .slider__btn.slider__next.next
+                        <svg width="49" height="20" viewBox="0 0 49 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M38.3752 0L36.5863 1.7625L43.6658 8.75H0.525024V11.25H43.6658L36.5863 18.2375L38.3752 20L48.525 10L38.3752 0Z" fill="#1A3D8A"/>
+                        </svg>
+
+
+      //- Кому могут помочь
+      section.section.help#help(data-section-name="help")
+        .help__container.container
+          .help__row.row
+            .points__title.section-title
+              h1.section-title__text КАК ЖЕ ЗАЩИТИТЬ СЕБЯ?
+              p.section-title__subtext Меры по обеспечению информационной безопасности
+            |
+            |
+            dl.help__grid
+              .help__item.save
+                dt.save__name Используйте лицензионное программное обеспечение
+                dd.save__image
+                  img(src="./images/save1.svg" alt="")
+              |
+              |
+              .help__item.save
+                dt.save__name Не передавайте конфиденциальную информацию 3-м лицам
+                dd.save__image
+                  img(src="./images/save2.svg" alt="")
+              |
+              |
+              .help__item.save
+                dt.save__name Используйте двухфакторную аутентификацию
+                dd.save__image
+                  img(src="./images/save3.svg" alt="")
+              |
+              |
+              .help__item.save
+                dt.save__name Используйте антивирусные программы
+                dd.save__image
+                  img(src="./images/save4.svg" alt="")
+              |
+              |
+              .help__item.save
+                dt.save__name Используйте браузер с самыми последними обновлениями
+                dd.save__image
+                  img(src="./images/save5.svg" alt="")
+              |
+              |
+              .help__item.save
+                dt.save__name Пользуйтесь современной операционной системой
+                dd.save__image
+                  img(src="./images/save6.svg" alt="")
+      
+
+      //- Как сделать заказ
+      section.section.how#how(data-section-name="how")
+        .how__container.container
+          .how__row.row
+            .info
+              .info__line
+                .how__about.info__about
+                  h1.how__title.info__title Кто обеспечивает информационную безопасность в России?
+                  p.how__text.info__text.
+                    Государственные органы РФ, контролирующие деятельность в области защиты информации:
+                  ul.info__list
+                    li Комитет Государственной думы по безопасности
+                    li Совет безопасности России
+                    li Федеральная служба по техническому и экспортному контролю (ФСТЭК России)
+                    li Федеральная служба безопасности Российской Федерации (ФСБ России)
+                    li Федеральная служба охраны Российской Федерации (ФСО России)
+                    li Служба внешней разведки Российской Федерации (СВР России)
+                    li Министерство обороны Российской Федерации (Минобороны России)
+
+
+                  a(href="#videos").how__order.info__order.anchor.green-btn Перейти к видеороликам
+
+      
+      //- Видео
+      section.section.videos#videos(data-section-name="videos")
+        .videos__container.container
+          .videos__row.row
+            .videos__title.section-title
+              h1.section-title__text Видеоролики
+              p.section-title__subtext Небольшие видеоролики объясняющие правила поведения в сети для всех возрастов
+            |
+            |
+            .videos__line
+              .videos__item.video
+                img(src="./images/video1-caption.jpg" alt="").video__caption.caption
+                .video__content.content
+                  h3.video__title 11 Советов по безопасности в интернете
+                  p.video__about Видеоролик о правилах поведения в сети
+                  a(href="https://youtu.be/wqu-9qGRIHU" data-fancybox="video").video__choice.green-btn Смотреть
+              |
+              |
+              .videos__item.video
+                img(src="./images/video2-caption.jpg" alt="").video__caption.caption
+                .video__content.content
+                  h3.video__title Безопасность детей в интернете
+                  p.video__about Видеоролик о том как защитить своих детей от влияния интернета
+                  a(href="https://youtu.be/3oxmLInP5_E" data-fancybox="video").video__choice.green-btn Смотреть
+              |
+              |
+              .videos__item.video
+                img(src="./images/video3-caption.jpg" alt="").video__caption.caption
+                .video__content.content
+                  h3.video__title Как защитить смартфон от взлома
+                  p.video__about Видеоролик о защите смартфона от взлома и о том, как узнать, был ли он взломан
+                  a(href="https://youtu.be/HFyT3XQVDAA" data-fancybox="video").video__choice.green-btn Смотреть
+
+            p.videos__note Информация носит исключительно информационный характер и ни при каких условиях не является публичной офертой.
+
+
+      //- Почему следует соблюдать
+      section.section.why-we#why-we(data-section-name="why-we")
+        .why-we__container.container
+          .why-we__row.row
+            .why-we__title.section-title
+              h1.section-title__text Почему следует соблюдать информационную безопасность
+              p.section-title__subtext «Терра Тех» обладает внушительным опытом поиска и анализа любой доступной пространственной информации на территории земного шара за любой период времени
+            |
+            |
+            .why-we__grid
+              .why-we__item.advantage
+                .advantage__head
+                  .advantage__icon
+                    img(src="./images/advantage1.svg" alt="")
+                  h3.advantage__title Это довольно легко
+                p.advantage__text Вам не нужно быть программистом или инженером, достаточно следовать уже выработанным рекомендациям от более опытных людей по итогам которых с Вашими личными данными всё будет в порядке. 
+
+              |
+              |
+
+              .why-we__item.advantage
+                .advantage__head
+                  .advantage__icon
+                    img(src="./images/advantage2.svg" alt="")
+                  h3.advantage__title Устройство будет работать быстрее
+                p.advantage__text Не секрет, что если на устройстве будет много вирусов - оно начнёт сильно тормозить. Следует не допускать их появления на вашей технике и они не потеряют в производительности
+              |
+              |
+
+              .why-we__item.advantage
+                .advantage__head
+                  .advantage__icon
+                    img(src="./images/advantage3.svg" alt="")
+                  h3.advantage__title Большой выбор инструментов
+                p.advantage__text За последние года было создано множество вирусов, но и столько же антивирусных программ, каждый найдёт нужный ему инструмент и сможет минимизировать количество вирусов на компьютере.
+              |
+              |
+
+              .why-we__item.advantage
+                .advantage__head
+                  .advantage__icon
+                    img(src="./images/advantage4.svg" alt="")
+                  h3.advantage__title Конфиденциальность
+                p.advantage__text Абсолютная конфиденциальность является одним из главных принципов личной жизни человека. Если на вашем компьютере будут вирусы - хакеры смогут следить за вашими действиями в социальных сетях и иных сервисах
+
+      
+      //- Часто задаваемые вопросы
+      section.section.questions#questions(data-section-name="questions")
+        .questions__container.container
+          .questions__row.row
+            .questions__title.section-title
+              h1.section-title__text Поведение при нарушении информационной безопасности 
+            |
+            |
+
+            .questions__answers.answers.accordeon
+              .answers__answer.answer
+                h3.answer__title.answer-title 
+                  | Мой компьютер взломали. Что делать?
+                  .answer-title__plus
+                .answer__content.answer-content
+                  p.answer__paragraph.
+                    Необходимо сначала принять меры безопасности исключающие несанкционированный доступ к Вашему ПК (персональному компютеру).
+
+                    Необходимо проверить антивирусной программой и утилитами для нахождения и удаления вирусов, троянов (других шпионских и вредоносных программ) Ваш ПК. 
+                  p.answer__paragraph.
+                    После проверки, если найдены и уничтожены вирусы (трояны и др.) , перегрузите Ваш компьютер, нажимая (кликая мышкой) последовательно ссылки, кнопку "Пуск"> "Завершение работы"> "Перегрузить компьютер" и снова просканируйте антивирусом свой компьютер. 
+                  p.answer__paragraph.
+                    Ни в каких программах, на жестких дисках ПК, не сохраняйте свои пароли, иначе они могут быть похищены. Можно сохранять пароли на сменных носителях (дискетах, flash картах, CD-DVD) или на бумаге, только нужно исключить к ним доступ посторонних. 
+              |
+              |
+
+              .answers__answer.answer
+                h3.answer__title.answer-title 
+                  | Мою банковскую карту взломали. Что мне делать?
+                  .answer-title__plus
+                .answer__content.answer-content
+                  p.answer__paragraph.
+                    Самое первое, что должно делать в такой ситуации – это звонок в банк или онлайн-консультация со специалистом. Сейчас даже получить займ онлайн не проблема, а написать в чат дежурному менеджеру, тем более. Поэтому, звоните, пишите или идите в ближайший офис банка, если с гаджетами на «ВЫ». Так же, очень важно знать причину, почему это произошло. Конечно, как правило, взлом карты происходит мошенниками из-за несовершенной системы безопасности.
+
+                  p.answer__paragraph.
+                    В этому случае необходимо заблокировать дебетовую карту. По банковскому закону, даже съёмные деньги находятся на транзакционном счёте в течение трёх суток. Поэтому, в этот временной промежуток необходимо сообщить банку об отмене операции. В этом случае деньги, в течении ближайшего времени поступят на карту, либо останутся на транзакционном счёте до выяснения обстоятельств.
+              |
+              |
+
+              .answers__answer.answer
+                h3.answer__title.answer-title 
+                  | Мой аккаунт в социальной сети взломали. Что делать?
+                  .answer-title__plus
+                .answer__content.answer-content
+                  p.answer__paragraph
+                  ul.answer__list
+                    li.answer__elem
+                      p.answer__paragraph Выполните полную проверку антивирусом, желательно при этом физически отключить компьютер от Интернета и локальной сети (выдернув кабель). Начинать следует именно с этого: если пароль был украден вирусом, то после установки нового пароля его мгновенно украдут повторно. 
+                    li.answer__elem
+                      p.answer__paragraph Смените пароль на новый на странице в своей социальной сети (нужный пункт следует искать в настройках), на привязанном к ней ящике электронной почты и других важных сайтах. 
+                    li.answer__elem
+                      p.answer__paragraph Если доступ к странице не удаётся восстановить с помощью восстановления пароля, срочно обратитесь в службу поддержки со страницы друга за помощью. 
+              |
+              |
+
+              .answers__answer.answer
+                h3.answer__title.answer-title 
+                  | Мои персональные данные украли. Что делать?
+                  .answer-title__plus
+                .answer__content.answer-content
+                  p.answer__paragraph.
+                    Обратитесь в полицию
+
+                  p.answer__paragraph.
+                    Вы также можете сообщить о краже личных данных в местное отделение полиции. Если вы решили обратиться в полицию, возьмите копию отчета о краже личных данных, удостоверение личности государственного образца с фотографией, подтверждение текущего адреса и любое доказательство того, что вы стали жертвой кражи личных данных, например требование о погашении задолженности. Не забудьте попросить копию полицейского отчета на случай, если он вам понадобится. Запишите номер телефона следователя для последующих обращений.
+              |
+              |
+
+
+      //- Секция с кнопкой начала опроса (квиза)
+      section.section.quiz-start.section-blue#quiz-start(data-section-name="quiz-start")
+        .quiz-start__container.container
+          .quiz-start__row.row
+            .quiz-start__title.section-title
+              h1.section-title__text Пройдите тестирование 
+            |
+            |
+            
+            .quiz-start__invite.invite
+              h3.invite__about По имеющемуся на сайте материалу было составлено небольшое тестирование. По итогам его прохождения Вы узнаете Ваш уровень знаний по информационной безопасности.
+              button.quiz-start__activate.green-btn(type="button") Пройти тестирование
+
+
+    //- Подвал
+    footer.footer#footer
+      .footer__container.container
+        .footer__row
+          a(href="./index.html").footer__logo.logo
+            img.logo__decor.decor(src="./images/decor.svg" alt="")
+            p.logo__text
+              | Информационная
+              br
+              | Безопасность
+          span.footer__company ГАПОУ МО "Егорьевский техникум"
+          a(href="https://github.com/DmiDrok/information-security-2023" target="_blank").footer__link Исходный код проекта
