@@ -392,6 +392,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // На прод - раскомментировать
-// console.log = () => {};
-// console.error = () => {};
-// console.warn = () => {};
+console.log = () => {};
+console.error = () => {};
+console.warn = () => {};
