@@ -3,6 +3,12 @@ function setCorrectSlider() {
   const $tasks = $('.task');
   const $now = $('.slider__buttons .now');
   const $all = $('.slider__buttons .all');
+
+  const $wrapper = $('.slider');
+  const $caseAside = $('.case__aside'); // Слайдер фотографий
+  const $caseContent = $('.case__content'); // Слайдер текста
+
+  // Счётчик активного слайда
   let actives = 1;
 
   $now.text(actives);
@@ -10,39 +16,60 @@ function setCorrectSlider() {
 
 
   // Слайдер с картинками
-  $('.case__aside').slick({
+  $caseAside.slick({
     arrows: false,
     asNavFor: '.case__content',
     speed: 1000,
     fade: true,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000,
-    draggable: false
+    draggable: false,
+    pauseOnHover: true,
+    pauseOnDotsHover: true,
   });
 
-  $('.case__aside').on('beforeChange', (event, slick, currentSlide, nextSlide) => {
+  $caseAside.on('beforeChange', (event, slick, currentSlide, nextSlide) => {
     actives = nextSlide + 1;
     $now.text(actives);
   });
 
   // Кастомные кнопки навигации
   $('.slider__prev').on('click', () => {
-    $('.case__aside').slick('slickPrev');
+    $caseAside.slick('slickPrev');
   });
   $('.slider__next').on('click', () => {
-    $('.case__aside').slick('slickNext');
+    $caseAside.slick('slickNext');
   });
 
   // Слайдер с вопросом - ответом
-  $('.case__content').slick({
+  $caseContent.slick({
     arrows: false,
     asNavFor: '.case__aside',
     speed: 1000,
     fade: true,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000,
     draggable: false,
+    pauseOnHover: true,
+    pauseOnDotsHover: true,
   });
+
+  // При наведении на оболочку слайдеров - остановить автопрокрутку
+  $wrapper.on('mouseover', stopAutoplay);
+
+  $wrapper.on('mouseout', startAutoplay);
+
+  // Остановить автопрокрутку
+  function stopAutoplay() {
+    $caseAside.slick('slickPause');
+    $caseContent.slick('slickPause');
+  }
+
+  // Возобновить автопрокрутку
+  function startAutoplay() {
+    $caseAside.slick('slickPlay');
+    $caseContent.slick('slickPlay');
+  }
 }
 
 

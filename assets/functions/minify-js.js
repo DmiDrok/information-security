@@ -4,12 +4,10 @@ const plugins = require('../plugins/plugins.js');
 const errorHandler = require('./error-handler.js');
 
 
-// minify main js file
+// concat main.min.js (dev) file and babelify.min.js (build)
 function minifyJs() {
-  return src(`${paths.dev.jsRoot}/${paths.dev.mainJs}`)
+  return src([`${paths.dev.jsRoot}/${paths.dev.mainJs}`, `${paths.build.jsRoot}/${paths.build.babelJs}`])
     .pipe(plugins.plumber({ errorHandler }))
-    .pipe(src(`${paths.build.jsRoot}/${paths.build.babelJs}`))
-    .pipe(plugins.uglifyjs())
     .pipe(plugins.concat(paths.dev.mainJs))
     .pipe(dest(paths.build.jsRoot));
 }
