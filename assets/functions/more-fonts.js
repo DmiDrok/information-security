@@ -13,7 +13,7 @@ function otfToTtf() {
 }
 
 // ttf to woff2
-function woffToWoff2() {
+function ttfToWoff2() {
   return src(`${paths.dev.fontsRoot}/**/*.ttf`)
     .pipe(plugins.plumber({ errorHandler }))
     .pipe(plugins.ttf2woff2())
@@ -23,5 +23,5 @@ function woffToWoff2() {
 
 module.exports = {
   otfToTtf,
-  woffToWoff2,
+  ttfToWoff2,
 }

@@ -23,7 +23,7 @@ exports.pug = pugToHtml;
 exports.js = uniteJs;
 
 // expanded options
-exports.fonts = series(expandFonts.otfToTtf, expandFonts.woffToWoff2);
+exports.fonts = series(expandFonts.otfToTtf, expandFonts.ttfToWoff2);
 exports.webp = generateWebp;
 
 // delicate options
