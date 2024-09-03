@@ -43,16 +43,24 @@ html(lang="ru")
                 a(href="#points").promo__order.green-btn.anchor Перейти к терминам
               .promo__image
                 picture
-                  source(srcset="./images/earth.webp 1x")
+                  source(srcset="data:image/gif;base64" media="(max-width: 600px)")
+                  source(srcset="./images/earth.webp 1x" media="(min-width: 601px)")
                   img.earth(src="./images/earth.png" alt="")
 
                 picture
-                  source(srcset="./images/sputnik.webp 1x")
+                  source(srcset="data:image/gif;base64" media="(max-width: 600px)")
+                  source(srcset="./images/sputnik.webp 1x" media="(min-width: 601px)")
                   img.sputnik(src="./images/sputnik.png" alt="")
 
+                picture
+                  source(srcset="data:image/gif;base64" media="(max-width: 600px)")
+                  source(srcset="./images/light.svg" media="(min-width: 601px)")
+                  img.light(src="./images/light.svg" alt="")
 
-                img.light(src="./images/light.svg" alt="")
-                img.stars(src="./images/stars.svg" alt="")
+                picture
+                  source(srcset="data:image/gif;base64" media="(max-width: 600px)")
+                  source(srcset="./images/stars.svg" media="(min-width: 601px)")
+                  img.stars(src="./images/stars.svg" alt="")
   
     main.main
 

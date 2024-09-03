@@ -1,3 +1,5 @@
+@import "vars";
+
 // === Описание логотипа ===
 .logo {
   position: relative;
@@ -64,7 +66,10 @@
     &.active::before {
       transform: scale(1);
     }
+  }
 
+  @media (max-width: 1024px) {
+    display: none;
   }
 }
 

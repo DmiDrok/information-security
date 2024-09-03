@@ -23,7 +23,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   overflow-x: hidden;
-  min-width: 1240px;
+  // min-width: 1240px;
   color: $text-color-black;
 
   &.unscroll {
@@ -59,10 +59,8 @@ body {
     &__list {
       display: flex;
       align-items: center;
-    }
-    
-    &__elem:not(:last-child) {
-      margin: 0 50px 0 0;
+      column-gap: 50px;
+      row-gap: 25px;
     }
     
     &__link {
@@ -95,6 +93,19 @@ body {
         align-items: center;
       }
     }
+
+    @media (max-width: 840px) {
+      flex-direction: column;
+      row-gap: 30px;
+      align-items: center;
+    }
+
+    @media (max-width: 620px) {
+      &__list {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
   }
 
   // Часть с красивыми словами
@@ -109,6 +120,8 @@ body {
 
     &__about {
       flex: 0 1 50%;
+      position: relative;
+      z-index: 100;
     }
 
     &__title {
@@ -117,6 +130,7 @@ body {
       font-size: 50px;
       line-height: 60px;
       white-space: nowrap;
+      hyphens: auto;
     }
 
     &__text {
@@ -171,6 +185,46 @@ body {
 
   @media (max-width: 930px) {
     height: 150vh !important;
+
+    .promo {
+      &__image img {
+        &.earth {
+          left: -525px !important;
+        }
+
+        &.sputnik {
+          left: -65px;
+        }
+
+        &.light {
+          left: -135px;
+        }
+
+        &.stars {
+          left: -437px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 860px) {
+    .promo {
+      &__about {
+        flex: 0 1 80%;
+      }
+
+      &__title {
+        white-space: initial;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .promo {
+      &__about {
+        flex: 1;
+      }
+    }
   }
 }
 
@@ -222,9 +276,13 @@ body {
       }
     }
 
-    @media (max-width: 570px) {
+    @media (max-width: 1360px) {
       grid-template-columns: repeat(2, min-content);
       justify-content: space-evenly;
+    }
+
+    @media (max-width: 460px) {
+      grid-template-columns: repeat(1, min-content);
     }
   }
 }
@@ -436,7 +494,7 @@ body {
 }
 
 
-// === Блок с описанием как сделать заказ ===
+// === Блок с описанием ===
 .how {
   background: $bg-blue;
 

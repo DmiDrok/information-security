@@ -75,7 +75,7 @@ function setCorrectSlider() {
 
 // Установка скролла по секциям
 function setCorrectScroll() {
-  if (window.matchMedia('(min-width: 720px)').matches) {
+  if (window.matchMedia('(min-width: 1024px)').matches) {
     $.scrollify.enable(); // Если посекционная прокрутка была выключена - она будет включена
     const $dots = $('.dot');
 

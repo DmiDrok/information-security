@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Информационная безопасность</title>
     <link rel="shortcut icon" href="./images/decor.svg">
+    <link rel="manifest" href="./app.webmanifest">
     <script defer src="./js/jquery-3.6.3.min.js"></script>
     <script defer src="./js/slick.min.js"></script>
     <script defer src="./js/scrollify.js"></script>
@@ -62,11 +63,21 @@
               </div>
               <div class="promo__image">
                 <picture>
-                  <source srcset="./images/earth.webp 1x"><img class="earth" src="./images/earth.png" alt="">
+                  <source srcset="data:image/gif;base64" media="(max-width: 600px)">
+                  <source srcset="./images/earth.webp 1x" media="(min-width: 601px)"><img class="earth" src="./images/earth.png" alt="">
                 </picture>
                 <picture>
-                  <source srcset="./images/sputnik.webp 1x"><img class="sputnik" src="./images/sputnik.png" alt="">
-                </picture><img class="light" src="./images/light.svg" alt=""><img class="stars" src="./images/stars.svg" alt="">
+                  <source srcset="data:image/gif;base64" media="(max-width: 600px)">
+                  <source srcset="./images/sputnik.webp 1x" media="(min-width: 601px)"><img class="sputnik" src="./images/sputnik.png" alt="">
+                </picture>
+                <picture>
+                  <source srcset="data:image/gif;base64" media="(max-width: 600px)">
+                  <source srcset="./images/light.svg" media="(min-width: 601px)"><img class="light" src="./images/light.svg" alt="">
+                </picture>
+                <picture>
+                  <source srcset="data:image/gif;base64" media="(max-width: 600px)">
+                  <source srcset="./images/stars.svg" media="(min-width: 601px)"><img class="stars" src="./images/stars.svg" alt="">
+                </picture>
               </div>
             </div>
           </div>
