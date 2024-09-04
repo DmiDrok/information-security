@@ -215,8 +215,13 @@ body:has(.quiz.active) {
   opacity: 1;
   cursor: pointer;
 }
-.quiz .quiz-main__list:not(:has(.quiz-main__result)) {
-  margin: 50px 0 0 0;
+.quiz .quiz-main__list {
+  margin-top: 50px;
+}
+@media (max-width: 550px) {
+  .quiz .quiz-main__list {
+    margin-top: 30px;
+  }
 }
 .quiz .quiz-main__variant {
   padding: 30px;
