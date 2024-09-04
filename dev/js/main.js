@@ -181,6 +181,7 @@ function setCorrectEarthAnimation() {
 
   let [x, y] = [null, null];
   document.body.addEventListener('mousemove', (event) => {
+    console.log('here')
     x = event.clientX;
     y = event.clientY;
 
@@ -188,7 +189,7 @@ function setCorrectEarthAnimation() {
     sputnik.style.transform = `translate(${x / 30}px, ${y / 20}px)`;
     light.style.transform = `translate(${x / 30}px, ${y / 20}px)`;
     stars.style.transform = `translate(${x / 70}px, ${y / 50}px)`;
-  });
+  }, { passive: true });
 }
 
 // Слежение за точками навигации через обсервер (для устройств, где не будет посекционного скролла)
@@ -397,7 +398,7 @@ function applyAll() {
   setCorrectAccordeon();
   setCorrectAnchors()
   setCorrectEarthAnimation();
-  setCorrectScroll();
+  // setCorrectScroll();
   setCorrectDotsOnMobiles();
   setCorrectQuiz();
   setCorrectLogicQuiz();

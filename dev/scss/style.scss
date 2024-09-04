@@ -222,7 +222,12 @@ body {
   @media (max-width: 600px) {
     .promo {
       &__about {
+        text-align: center;
         flex: 1;
+      }
+
+      &__text {
+        width: 100%;
       }
     }
   }
@@ -363,26 +368,21 @@ body {
       }
 
       &__nav {
-        padding: 50px 0 0 0;
+        padding-top: 50px;
         display: flex;
-
-        @media (max-height: 800px) {
-          padding: 30px 0 0 0;
-        }
       }
 
-      @media (max-width: 570px) {
-        &__content {
-          margin: 50px 0 0 0;
-        }
-
+      @media (max-width: 1270px) {
         &__line {
           flex-direction: column;
           align-items: center;
         }
 
+        &__content {
+          margin: 50px 0 0 0;
+        }
+
         &__nav {
-          padding: 60px 0 0 0;
           justify-content: center;
         }
       }
@@ -393,6 +393,22 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      @media (max-width: 710px) {
+        width: 35%;
+      }
+
+      @media (max-width: 580px) {
+        width: 50%;
+      }
+
+      @media (max-width: 420px) {
+        width: 80%;
+      }
+
+      @media (max-width: 370px) {
+        width: 100%;
+      }
     }
 
     &__btn {
@@ -441,13 +457,23 @@ body {
         &__text {
           font-size: 20px;
         }
+
+        @media (max-width: 480px) {
+          &__text {
+            font-size: 18px;
+          }
+        }
       }
 
       .answer {
-        margin: 50px 0 0 0;
+        margin-top: 50px;
 
         &__text {
           font-size: 17px;
+        }
+
+        @media (max-width: 550px) {
+          margin-top: 20px;
         }
       }
     }
@@ -486,9 +512,13 @@ body {
       }
     }
 
-    @media (max-width: 570px) {
+    @media (max-width: 910px) {
       grid-template-columns: repeat(2, min-content);
       justify-content: space-evenly;
+    }
+
+    @media (max-width: 640px) {
+      grid-template-columns: repeat(1, min-content);
     }
   }
 }
@@ -534,6 +564,8 @@ body {
   &__line {
     margin: 50px 0 0 0;
     display: flex;
+    gap: 80px;
+    justify-content: center;
 
     .video {
       flex: 0 1 33.333%;
@@ -548,10 +580,6 @@ body {
       position: relative;
       overflow: hidden;
       cursor: pointer;
-
-      &:not(:last-child) {
-        margin: 0 80px 0 0;
-      }
 
       &:hover .content {
         transform: translateY(0);
@@ -604,10 +632,33 @@ body {
         }
       }
 
-      @media (max-width: 1024px) {
+      @media (pointer: coarse) {
         .content {
           transform: translateY(0);
         }
+      }
+    }
+
+    @media (max-width: 1135px) {
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    @media (max-width: 830px) {
+      .video {
+        flex: 0 1 45%;
+      }
+    }
+
+    @media (max-width: 530px) {
+      .video {
+        flex: 0 1 75%;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .video {
+        flex: 0 1 100%;
       }
     }
   }
@@ -684,7 +735,7 @@ body {
       font-weight: 500;
       font-size: 20px;
       line-height: 27px;
-      white-space: nowrap;
+      word-break: break-all;
     }
 
     &__text {
@@ -692,6 +743,12 @@ body {
       font-weight: 300;
       font-size: 17px;
       line-height: 27px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    &__grid {
+      grid-template-columns: 1fr;
     }
   }
 }
@@ -720,14 +777,15 @@ body {
 
     .answer {
       padding: 30px 40px;
+      padding-right: 80px;
       cursor: pointer;
       transition: opacity ease .4s;
+      position: relative;
 
       &:hover {
         opacity: .7;
       }
 
-      
       &:not(:last-child) {
         border-bottom: 2px solid #E2E7F0;
       }
@@ -753,16 +811,16 @@ body {
       }
 
       .answer-title {
-        position: relative;
+        // position: relative;
         font-weight: 500;
         font-size: 19px;
         line-height: 27px;
 
         &__plus {
           position: absolute;
-          top: 50%;
+          top: 45px;
           transform: translate(0, -50%);
-          right: 0;
+          right: 30px;
           transition: transform ease .4s;
           
           &::before,
@@ -845,6 +903,14 @@ body {
       text-decoration: underline;
     }
   }
+
+  @media (max-width: 680px) {
+    &__row {
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
 }
 
 
@@ -882,5 +948,11 @@ body {
   &__activate {
     margin: 40px auto 0 auto;
     display: block !important;
+  }
+
+  @media (max-width: 520px) {
+    .invite {
+      width: 100%;
+    }
   }
 }
