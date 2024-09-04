@@ -36,3 +36,8 @@ head
   //- Other
   link(rel="stylesheet" href="./css/style.css")
   script(defer src="./js/main.js")
+
+  script.
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js');
+    }

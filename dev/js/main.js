@@ -391,7 +391,6 @@ function setCorrectLogicQuiz() {
   }
 }
 
-
 // Вызов всех настраивающих функций
 function applyAll() {
   setCorrectSlider();

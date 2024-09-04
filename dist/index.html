@@ -5,10 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Информационная безопасность</title>
-
+    <link rel="shortcut icon" href="./images/decor.svg">
     <link rel="manifest" href="./app.webmanifest">
-    <link rel="stylesheet" href="./css/style.min.css">
-    <script defer src="./js/main.min.js"></script>
+    <script defer src="./js/jquery-3.6.3.min.js"></script>
+    <script defer src="./js/slick.min.js"></script>
+    <script defer src="./js/scrollify.js"></script>
+    <script defer src="./js/fancybox.min.js"></script>
+    <link rel="stylesheet" href="./css/fancybox.min.css">
+    <link rel="stylesheet" href="./css/panzoom.min.css">
+    <script defer src="./js/quiz/results.js"></script>
+    <script defer src="./js/quiz/questions.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/main.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js');
+      }
+    </script>
   </head>
   <body>
     <div class="dots"><a class="dot anchor active" href="#header"></a><a class="dot anchor" href="#points"></a><a class="dot anchor" href="#examples"></a><a class="dot anchor" href="#help"></a><a class="dot anchor" href="#how"></a><a class="dot anchor" href="#videos"></a><a class="dot anchor" href="#why-we"></a><a class="dot anchor" href="#questions"></a><a class="dot anchor" href="#quiz-start"></a></div>
