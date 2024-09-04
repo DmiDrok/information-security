@@ -168,14 +168,20 @@
 }
 
 // === Квиз ===
+body:has(.quiz.active) {
+  overflow-y: hidden;
+}
+
 .quiz {
   background: rgba(0, 0, 0, .7);
   position: fixed;
   width: 100%;
   height: 100%;
+  overflow-y: auto;
   z-index: -1;
   opacity: 0;
   transition: opacity ease .5s;
+  display: flex;
   
   &.active {
     z-index: 10000;
@@ -184,14 +190,13 @@
 
   // Содержимое блока квиза
   .content {
-    position: absolute;
+    position: relative;
     width: 90%;
     // height: 90%;
+    margin: 30px 0;
     background: #fff;
     border-radius: 6px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    margin: auto;
 
     .close {
       position: absolute;
@@ -222,16 +227,14 @@
       font-weight: 700;
       display: flex;
       align-items: center;
+      gap: 25px;
 
       .question-title { 
-        margin: 0 0 0 25px;
         line-height: 40px;
       }
 
       &__next-block {
         flex: 1 1 auto;
-        padding: 0 50px 0 0;
-        margin: 0 0 0 25px;
       }
 
       &__next {
@@ -252,7 +255,9 @@
     }
 
     &__list {
-      margin: 50px 0 0 0;
+      &:not(:has(.quiz-main__result)) {
+        margin: 50px 0 0 0;
+      }
     }
 
     &__variant {
@@ -263,6 +268,7 @@
       transition: box-shadow ease .4s;
       cursor: pointer;
       position: relative;
+      padding-right: 75px;
 
       &::before {
         content: "";
@@ -310,7 +316,6 @@
     }
 
     &__count {
-      margin: 0 0 0 30px;
       letter-spacing: 10px;
     }
 
@@ -323,6 +328,44 @@
 
     &__restart {
       margin: 30px 0 0 0;
+    }
+  }
+
+  @media (max-width: 805px) {
+    .quiz-main {
+      &__question {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      &__title {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 550px) {
+    .quiz-main {
+      &__result {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 380px) {
+    .quiz-main {
+      .question {
+        justify-content: center;
+
+        &-title {
+          text-align: center;
+        }
+
+        &__next-block {
+          display: flex;
+          justify-content: center;
+        }
+      }
     }
   }
 }

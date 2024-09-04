@@ -398,7 +398,7 @@ function applyAll() {
   setCorrectAccordeon();
   setCorrectAnchors()
   setCorrectEarthAnimation();
-  // setCorrectScroll();
+  setCorrectScroll();
   setCorrectDotsOnMobiles();
   setCorrectQuiz();
   setCorrectLogicQuiz();
